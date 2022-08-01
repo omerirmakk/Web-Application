@@ -1,0 +1,74 @@
+﻿@model OmerIRMAKWEB.APP.Models.Ulasim
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "İletişim";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>İletişim</h1>
+@using(Html.BeginForm("Ekle"))
+{
+    <table>
+        <tr>
+            <td>
+                Ad :
+            </td>
+            <td>
+                <input type="text" asp-for="Ad"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Soyad :
+            </td>
+            <td>
+                <input type="text" asp-for="Soyad"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                E-Mail :
+            </td>
+            <td>
+                <input type="email" asp-for="E_mail"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                E-Mail (Tekrar) :
+            </td>
+            <td>
+                <input type="email" asp-for="E_mail2"/>
+                <span asp-validation-for="E_mail2"></span>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Telefon :
+            </td>
+            <td>
+                <input type="tel" asp-for="Telefon"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Mesaj :
+            </td>
+            <td>
+                <input type="text" asp-for="Mesaj"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Kaydet"/>
+            </td>
+        </tr>
+    </table>
+}
+

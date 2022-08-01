@@ -1,0 +1,40 @@
+﻿@model IEnumerable<OmerIRMAKWEB.APP.Models.Hakkimda>
+
+@{
+    ViewData["Title"] = "Hakkımda";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Hakkımda</h1>
+
+
+<p>
+    
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Ozgecmis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VideoLinki)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ozgecmis)
+            </td>
+            
+            <td>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/7uJGjbkp0-U" src="@Html.DisplayFor(modelItem => item.VideoLinki)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>

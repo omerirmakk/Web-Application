@@ -1,0 +1,50 @@
+﻿@model IEnumerable<OmerIRMAKWEB.APP.Models.Proje>
+
+@{
+    ViewData["Title"] = "Proje";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Proje</h1>
+
+<p>
+   
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeAciklamasi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeYili)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeAdi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeAciklamasi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeYili)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
